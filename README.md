@@ -44,7 +44,7 @@ yarn test
 
 ### Postman
 
-- Importar la colección: `postman/portfolio-api.postman_collection.json`
+- Importar la colección: `cocos-challenge.postman_collection.json`
 - Configurar la variable de entorno `baseUrl` en Postman: `http://localhost:3000`
 
 ## Estructura del Proyecto

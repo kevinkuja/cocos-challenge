@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "c103402e-ce7d-4e70-a478-83501f694345",
+		"name": "Cocos Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18234252"
+	},
+	"item": [
+		{
+			"name": "Get Portfolio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/portfolio/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"portfolio",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Assets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/assets/search?q=DYCA",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"assets",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "DYCA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit Market Buy Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"userId\":1,\"instrumentId\":1,\"side\":\"BUY\",\"type\":\"MARKET\",\"size\":100}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/orders",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit Limit Buy Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"userId\":1,\"instrumentId\":1,\"side\":\"BUY\",\"type\":\"LIMIT\",\"size\":100,\"price\":250}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/orders",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit Cash In Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"userId\":1,\"instrumentId\":66,\"side\":\"CASH_IN\",\"type\":\"MARKET\",\"amount\":100000}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/orders",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:3000"
+		}
+	]
+}
