@@ -36,12 +36,4 @@ export class OrderRepository {
     );
     return result.rows[0];
   }
-
-  async updateOrderStatus(orderId: number, userId: number, status: string) {
-    const result = await pool.query(
-      `UPDATE orders SET status = $1 WHERE id = $2 AND userId = $3 RETURNING *`,
-      [status, orderId, userId],
-    );
-    return result.rows[0];
-  }
 }

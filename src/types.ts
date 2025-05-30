@@ -71,11 +71,6 @@ export interface SubmitOrderRequest {
   price?: number;
 }
 
-export interface CancelOrderRequest {
-  orderId: number;
-  userId: number;
-}
-
 export interface SearchAssetsRequest {
   query: string;
 }
